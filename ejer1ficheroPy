@@ -1,0 +1,18 @@
+#escribiremos un fichero
+def escribe(fichero,datos):
+    f=open('mifichero.txt','w')
+
+    for linea in datos:
+        if not linea.endswith('\n'):
+            linea+='\n'
+        f.write(linea)
+    f.close()
+
+lista=[
+    'primera linea',
+    'segunda linea',
+    'tercera linea',
+    'ultima linea'
+]
+
+escribe('mifichero.txt',lista)
